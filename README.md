@@ -1,5 +1,5 @@
-# farcolorer_yaml4ha
-FarColorer YAML Highlighting for Home Assistant
+# FarColorer YAML4HA
+FarColorer Yaml files highlighting for Home Assistant
 
 Highlighting:
 - domains
