@@ -4,7 +4,7 @@
 ---
 Highlighting:
 - domains
-- if syntax
+- `if` syntax
 - ip address
 - special tags `custom:` `mdi:` `phu:`
 ---
