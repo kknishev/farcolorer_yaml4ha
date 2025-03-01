@@ -70,7 +70,7 @@
         		region01="def:SymbolStrong" region11="def:SymbolStrong"
         	/>
         	<block start="/(\{)/" end="/(\})/" scheme="YamlBody"
-        		region00="def:PairStart"        region10="def:PairEnd"
+        		region00="def:PairStart" region10="def:PairEnd"
         		region01="def:SymbolStrong" region11="def:SymbolStrong"
         	/>
         	<keywords region="def:Error">
@@ -104,13 +104,12 @@
 
         <scheme name="HomeAssistant">
         	<regexp match="/(alarm_control_panel|automation|binary_sensor|button|calendar|camera|cast|counter|fan|floorplan|group|humidifier|input_(boolean|button|number|select|text)|light|media_player|notify|person|script|sensor|switch|telegram_bot|tts|update|weather|zone)\./" region="def:Label"/>
-        	<regexp match="/(!secret| if | elif | and | else |endif )/" region="def:NumberSuffix"/>
+        	<regexp match="/(homeassistant|scene)\./" region="def:StringEdge"/>
+        	<regexp match="/(!secret|!include_dir_merge_list|!include| if | elif | and | else |endif )/" region="def:NumberSuffix"/>
+        	<regexp match="/( custom:| mdi:| phu:)/" region="def:NumberSuffix"/>
                 <block start="/( `)/" end="/(`)/"  scheme="HomeAssistant" region="def:CommentContent"/>
                 <block start="/( ')/" end="/(')/"  scheme="HomeAssistant" region="def:CommentContent"/>
-                <block start="/( custom)/" end="/(:)/"  scheme="HomeAssistant" region="def:NumberSuffix"/>
-                <block start="/( mdi)/" end="/(:)/"  scheme="HomeAssistant" region="def:NumberSuffix"/>
-                <block start="/( phu)/" end="/(:)/"  scheme="HomeAssistant" region="def:NumberSuffix"/>
-                <block start="/(  -)/" end="/( )/"  scheme="HomeAssistant" region="def:Constant"/>
+                <block start="/(  -)/" end="/( )/" scheme="HomeAssistant" region="def:Constant"/>
                 <regexp match="/([0-2]{1})?([0-9]{1})?[0-9]{1}[.]([0-2]{1})?([0-9]{1})?[0-9]{1}[.]([0-2]{1})?([0-9]{1})?[0-9]{1}[.]([0-2]{1})?([0-9]{1})?[0-9]{1}/" region="def:NumberSuffix" priority="low"/>
         </scheme>
 
