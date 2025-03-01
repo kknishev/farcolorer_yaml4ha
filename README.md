@@ -4,10 +4,10 @@
 ---
 
 Highlighting:
-- domains
+- actions, domains
 - `if` syntax
 - ip address
-- special tags `custom:` `mdi:` `phu:`
+- special tags like `!secret` `!include` `custom:` `mdi:` `phu:`
 
 ---
 
