@@ -4,7 +4,7 @@
 ---
 
 Highlighting:
-- actions, domains
+- actions, domains like `homeassistant.` `sensor.` etc.
 - `if` syntax
 - ip address
 - special tags like `!secret` `!include` `custom:` `mdi:` `phu:`
