@@ -103,7 +103,7 @@
         </scheme>
 
         <scheme name="HomeAssistant">
-        	<regexp match="/(alarm_control_panel|automation|binary_sensor|button|calendar|camera|cast|counter|fan|floorplan|group|humidifier|input_(boolean|button|number|select|text)|light|media_player|notify|person|script|sensor|switch|telegram_bot|tts|update|utility_meter|weather|zone)\./" region="def:Label"/>
+        	<regexp match="/(alarm_control_panel|automation|binary_sensor|button|calendar|camera|cast|counter|device_tracker|fan|floorplan|group|humidifier|input_(boolean|button|number|select|text)|light|media_player|notify|person|script|sensor|switch|telegram_bot|tts|update|utility_meter|weather|zone)\./" region="def:Label"/>
         	<regexp match="/(homeassistant|scene|wake_on_lan|webrtc)\./" region="def:StringEdge"/>
         	<regexp match="/(!secret|!include_dir_merge_list|!include| if | elif | and | else |endif )/" region="def:NumberSuffix"/>
         	<regexp match="/( custom:| mdi:| phu:| yandex:)/" region="def:NumberSuffix"/>
