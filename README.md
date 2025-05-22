@@ -4,10 +4,10 @@
 ---
 
 Highlighting:
-- actions, domains like `homeassistant.` `sensor.` etc.
-- `if` syntax
+- actions, domains as `homeassistant.` `sensor.` etc.
+- template syntax as `if` `else` `endif` etc.
 - ip address
-- special tags like `!secret` `!include` `custom:` `mdi:` `phu:`
+- special tags as `!secret` `!include` `custom:` `mdi:` `phu:`
 
 ---
 
