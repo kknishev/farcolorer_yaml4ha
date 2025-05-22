@@ -69,12 +69,10 @@
         <scheme name="Brackets">
         	<block start="/(\[)/" end="/(\])/" scheme="YamlBody"
         		region00="def:PairStart"	region10="def:PairEnd"
-        		region01="def:SymbolStrong"	region11="def:SymbolStrong"
-        	/>
+        		region01="def:SymbolStrong"	region11="def:SymbolStrong" />
         	<block start="/(\{)/" end="/(\})/" scheme="YamlBody"
         		region00="def:PairStart"	region10="def:PairEnd"
-        		region01="def:SymbolStrong"	region11="def:SymbolStrong"
-        	/>
+        		region01="def:SymbolStrong"	region11="def:SymbolStrong" />
         	<keywords region="def:Error">
         		<symb name="]"/>
         		<symb name="}"/>
@@ -83,9 +81,7 @@
 
         <scheme name="Tags">
             <regexp match="/!h?\!\w+/" region="def:Directive" />
-        	<regexp match="/!&lt;[^&gt;]+&gt;/"
-        		region="def:Directive"
-        	/>
+        	<regexp match="/!&lt;[^&gt;]+&gt;/" region="def:Directive" />
         </scheme>
 
         <scheme name="Scalars">
@@ -140,8 +136,7 @@
         <scheme name="yaml">
             <block start="/^(-{3})(\s|$)?=/" end="/^(\.{3}|(-{3})?=)/" scheme="YamlBody" priority="low"
             	region00="def:PairStart" region10="def:PairEnd"
-            	region01="DocumentStart" region11="DocumentEnd"
-            />
+            	region01="DocumentStart" region11="DocumentEnd" />
         	<inherit scheme="YamlBody"/>
         </scheme>
 
