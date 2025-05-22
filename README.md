@@ -1,5 +1,5 @@
 # FarColorer YAML4HA
-[FarColorer](https://github.com/colorer/FarColorer) yaml files highlighting for [Home Assistant](https://www.home-assistant.io)
+[FarColorer](https://github.com/colorer/FarColorer) yaml files highlighting for [Home Assistant](https://www.home-assistant.io) syntax
 
 ---
 
