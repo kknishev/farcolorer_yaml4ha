@@ -38,8 +38,6 @@
 			<regexp match="/\\x[\da-fA-F]{2}/" region="def:SymbolStrong" />
 			<regexp match="/\\u[\da-fA-F]{4}/" region="def:SymbolStrong" />
 			<regexp match="/\\U[\da-fA-F]{8}/" region="def:SymbolStrong" />
-
-			<!--regexp match="/\\./" region="def:Error" /-->
 		</scheme>
 		<scheme name="Numbers">
 			<regexp match="/(^|\s)?#1\b-?\d+(\.\d+)?\b/" region="def:Number"/>
