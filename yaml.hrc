@@ -43,14 +43,14 @@
 			<inherit scheme="def:Date"/>
 		</scheme>
 		<scheme name="Strings">
-		<inherit scheme="HomeAssistant"/>
-		<inherit scheme="Escapes"/>
+			<inherit scheme="HomeAssistant"/>
+			<inherit scheme="Escapes"/>
 			<regexp match="/(%byte;)(?{def:Symbol}\.)(%byte;)(?{def:Symbol}\.)(%byte;)(?{def:Symbol}\.)(%byte;)((?{def:SymbolStrong}:)(%word;))?/" region="IP" />
 			<regexp match="/%[\w\._]+%/" region="def:Constant" />
-		<inherit scheme="Date" />
-		<inherit scheme="def:Time" />
-		<inherit scheme="def:NetAddresses" />
-		<inherit scheme="Numbers" />
+			<inherit scheme="Date" />
+			<inherit scheme="def:Time" />
+			<inherit scheme="def:NetAddresses" />
+			<inherit scheme="Numbers" />
 		</scheme>
         <scheme name="Comments">
         	<regexp match="/#.*$/" region="def:Comment"/>
