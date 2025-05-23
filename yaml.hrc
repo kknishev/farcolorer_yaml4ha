@@ -50,7 +50,7 @@
 		<inherit scheme="Date"/>
 		<inherit scheme="def:Time"/>
 		<inherit scheme="def:NetAddresses"/>
-		<inherit scheme="Numbers" />
+		<inherit scheme="Numbers"/>
 	</scheme>
         <scheme name="Comments">
         	<regexp match="/#.*$/" region="def:Comment"/>
