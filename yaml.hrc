@@ -103,13 +103,13 @@
         	<regexp match="/(homeassistant|scene|wake_on_lan|webrtc)\./"	region="def:StringEdge"/>
         	<regexp match="/(!secret|!include_dir_(named|merge_(list|named))|!include| set | for | in | endfor| if | elif | and | or | else| endif| =(=)? | (&lt;(=)?|&gt;(=)?) )/" region="def:NumberSuffix"/>
         	<regexp match="/( custom:| mdi:| phu:| yandex:)/" region="def:NumberSuffix"/>
-        	<regexp match="/(states|is_state|state_attr|float|int)/"	region="def:Test"/>
+        	<regexp match="/(states|is_state|state_attr|float|int)/" region="def:Test"/>
         	<regexp match="/( true)/"	region="def:Number"/>
         	<regexp match="/( false)/"	region="def:StringEdge"/>
         	<regexp match="/\m \%\M/" region="def:Symbol"/>
-                <block start="/( `)/" end="/(`)/"	scheme="HomeAssistant"	region="def:CommentContent"/>
-                <block start="/( ')/" end="/(')/"	scheme="HomeAssistant"	region="def:CommentContent"/>
-                <block start="/(  -)/" end="/( )/"	scheme="HomeAssistant"	region="def:Constant"/>
+                <block start="/( `)/" end="/(`)/"	scheme="HomeAssistant" region="def:CommentContent"/>
+                <block start="/( ')/" end="/(')/"	scheme="HomeAssistant" region="def:CommentContent"/>
+                <block start="/(  -)/" end="/( )/"	scheme="HomeAssistant" region="def:Constant"/>
                 <block start="/( platform| service)/" end="/(:)/"  scheme="HomeAssistant" region="def:Comment"/>
                 <regexp match="/([0-2]{1})?([0-9]{1})?[0-9]{1}[.]([0-2]{1})?([0-9]{1})?[0-9]{1}[.]([0-2]{1})?([0-9]{1})?[0-9]{1}[.]([0-2]{1})?([0-9]{1})?[0-9]{1}/" region="def:NumberSuffix" priority="low"/>
         </scheme>
