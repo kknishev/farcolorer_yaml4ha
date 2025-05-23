@@ -105,7 +105,7 @@
         	<regexp match="/( custom:| mdi:| phu:| yandex:)/" region="def:NumberSuffix"/>
         	<regexp match="/(states|is_state|state_attr|float|int)/"	region="def:Test"/>
         	<regexp match="/( true)/"	region="def:Number"/>
-        	<regexp match="/( false)/"	region="def:Var"/>
+        	<regexp match="/( false)/"	region="def:StringEdge"/>
         	<regexp match="/\m \%\M/" region="def:Symbol"/>
                 <block start="/( `)/" end="/(`)/"	scheme="HomeAssistant"	region="def:CommentContent"/>
                 <block start="/( ')/" end="/(')/"	scheme="HomeAssistant"	region="def:CommentContent"/>
