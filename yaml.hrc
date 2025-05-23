@@ -30,28 +30,28 @@
 		<region name="TagEdge" parent="def:Tag"/>
 		<region name="IP" parent="def:EMail"/>
 		<region name="Bordo" parent="yaml:Bordo"/>
-		<scheme name="Escapes">
-			<regexp match="/\\[0\\abtnvfre&quot;N_Lp]/" region="def:SymbolStrong" />
-			<regexp match="/\\x[\da-fA-F]{2}/" region="def:SymbolStrong" />
-			<regexp match="/\\u[\da-fA-F]{4}/" region="def:SymbolStrong" />
-			<regexp match="/\\U[\da-fA-F]{8}/" region="def:SymbolStrong" />
-		</scheme>
-		<scheme name="Numbers">
-			<regexp match="/(^|\s)?#1\b-?\d+(\.\d+)?\b/" region="def:Number"/>
-		</scheme>
-		<scheme name="Date">
-			<inherit scheme="def:Date"/>
-		</scheme>
-		<scheme name="Strings">
-			<inherit scheme="HomeAssistant"/>
-			<inherit scheme="Escapes"/>
-			<regexp match="/(%byte;)(?{def:Symbol}\.)(%byte;)(?{def:Symbol}\.)(%byte;)(?{def:Symbol}\.)(%byte;)((?{def:SymbolStrong}:)(%word;))?/" region="IP" />
-			<regexp match="/%[\w\._]+%/" region="def:Constant" />
-			<inherit scheme="Date" />
-			<inherit scheme="def:Time" />
-			<inherit scheme="def:NetAddresses" />
-			<inherit scheme="Numbers" />
-		</scheme>
+	<scheme name="Escapes">
+		<regexp match="/\\[0\\abtnvfre&quot;N_Lp]/" region="def:SymbolStrong" />
+		<regexp match="/\\x[\da-fA-F]{2}/" region="def:SymbolStrong" />
+		<regexp match="/\\u[\da-fA-F]{4}/" region="def:SymbolStrong" />
+		<regexp match="/\\U[\da-fA-F]{8}/" region="def:SymbolStrong" />
+	</scheme>
+	<scheme name="Numbers">
+		<regexp match="/(^|\s)?#1\b-?\d+(\.\d+)?\b/" region="def:Number"/>
+	</scheme>
+	<scheme name="Date">
+		<inherit scheme="def:Date"/>
+	</scheme>
+	<scheme name="Strings">
+		<inherit scheme="HomeAssistant"/>
+		<inherit scheme="Escapes"/>
+		<regexp match="/(%byte;)(?{def:Symbol}\.)(%byte;)(?{def:Symbol}\.)(%byte;)(?{def:Symbol}\.)(%byte;)((?{def:SymbolStrong}:)(%word;))?/" region="IP" />
+		<regexp match="/%[\w\._]+%/" region="def:Constant" />
+		<inherit scheme="Date" />
+		<inherit scheme="def:Time" />
+		<inherit scheme="def:NetAddresses" />
+		<inherit scheme="Numbers" />
+	</scheme>
         <scheme name="Comments">
         	<regexp match="/#.*$/" region="def:Comment"/>
         </scheme>
