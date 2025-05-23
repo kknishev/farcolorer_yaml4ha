@@ -119,7 +119,7 @@
         </scheme>
         <scheme name="yaml">
             <block start="/^(-{3})(\s|$)?=/" end="/^(\.{3}|(-{3})?=)/" scheme="YamlBody" priority="low"
-            	region00="def:PairStart" region10="def:PairEnd"	region01="DocumentStart" region11="DocumentEnd" />
+            	region00="def:PairStart" region10="def:PairEnd" region01="DocumentStart" region11="DocumentEnd" />
         	<inherit scheme="YamlBody"/>
         </scheme>
     </type>
