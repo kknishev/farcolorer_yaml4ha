@@ -59,10 +59,8 @@
 			<regexp match="/([\w\.\:\-]+)\M:(\s|$)?=/" region1="KeyName" />
         </scheme>
         <scheme name="Brackets">
-        	<block start="/(\[)/" end="/(\])/" scheme="YamlBody"
-        		region00="def:PairStart" region10="def:PairEnd" region01="def:SymbolStrong" region11="def:SymbolStrong" />
-        	<block start="/(\{)/" end="/(\})/" scheme="YamlBody" region00="def:PairStart" region10="def:PairEnd"
-        		region01="def:SymbolStrong" region11="def:SymbolStrong" />
+        	<block start="/(\[)/" end="/(\])/" scheme="YamlBody" region00="def:PairStart" region10="def:PairEnd" region01="def:SymbolStrong" region11="def:SymbolStrong" />
+        	<block start="/(\{)/" end="/(\})/" scheme="YamlBody" region00="def:PairStart" region10="def:PairEnd" region01="def:SymbolStrong" region11="def:SymbolStrong" />
         	<keywords region="def:Error">
         		<symb name="]"/>
         		<symb name="}"/>
@@ -105,21 +103,19 @@
         <scheme name="YamlBody">
         	<inherit scheme="HomeAssistant"/>
         	<inherit scheme="Comments"/>
-			<inherit scheme="Tags" />
-			<inherit scheme="def:Time" />
+		<inherit scheme="Tags" />
+		<inherit scheme="def:Time" />
         	<inherit scheme="Keys"/>
         	<inherit scheme="Scalars"/>
         	<regexp match="/[&amp;*]\w+/" region="def:Var" />
         	<regexp match="/[|?&gt;!%&amp;`@]($|\s)?=/" region="def:Symbol" />
         	<inherit scheme="Brackets"/>
-        	<block start="/([&apos;&quot;])/" end="/(\Y1)/" scheme="Strings" region="def:String" priority="low"
-        		region00="def:PairStart" region10="def:PairEnd" region01="def:StringEdge" region11="def:StringEdge" />
+        	<block start="/([&apos;&quot;])/" end="/(\Y1)/" scheme="Strings" region="def:String" priority="low" region00="def:PairStart" region10="def:PairEnd" region01="def:StringEdge" region11="def:StringEdge" />
         	<block start="/[^\s,:?;-]?=/" end="/[,\[\]\{\}#&apos;&quot;]?=|(^\.{3})?=|$/" scheme="Strings" region="def:String" priority="low" />
         	<regexp match="/[\?:,\[\]\{\}#&amp;\*!|&gt;&apos;&quot;%@`\-]/" region="def:Symbol" priority="low"/>
         </scheme>
         <scheme name="yaml">
-            <block start="/^(-{3})(\s|$)?=/" end="/^(\.{3}|(-{3})?=)/" scheme="YamlBody" priority="low"
-            	region00="def:PairStart" region10="def:PairEnd" region01="DocumentStart" region11="DocumentEnd" />
+        	<block start="/^(-{3})(\s|$)?=/" end="/^(\.{3}|(-{3})?=)/" scheme="YamlBody" priority="low" region00="def:PairStart" region10="def:PairEnd" region01="DocumentStart" region11="DocumentEnd" />
         	<inherit scheme="YamlBody"/>
         </scheme>
     </type>
