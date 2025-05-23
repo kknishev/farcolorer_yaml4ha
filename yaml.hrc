@@ -52,7 +52,6 @@
 		<inherit scheme="def:NetAddresses" />
 		<inherit scheme="Numbers" />
 		</scheme>
-
         <scheme name="Comments">
         	<regexp match="/#.*$/" region="def:Comment"/>
         </scheme>
@@ -61,10 +60,8 @@
         </scheme>
         <scheme name="Brackets">
         	<block start="/(\[)/" end="/(\])/" scheme="YamlBody"
-        		region00="def:PairStart" region10="def:PairEnd"
-        		region01="def:SymbolStrong" region11="def:SymbolStrong" />
-        	<block start="/(\{)/" end="/(\})/" scheme="YamlBody"
-        		region00="def:PairStart" region10="def:PairEnd"
+        		region00="def:PairStart" region10="def:PairEnd" region01="def:SymbolStrong" region11="def:SymbolStrong" />
+        	<block start="/(\{)/" end="/(\})/" scheme="YamlBody" region00="def:PairStart" region10="def:PairEnd"
         		region01="def:SymbolStrong" region11="def:SymbolStrong" />
         	<keywords region="def:Error">
         		<symb name="]"/>
