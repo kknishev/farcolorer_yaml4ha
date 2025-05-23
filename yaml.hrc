@@ -4,7 +4,6 @@
 <hrc version="take5" xmlns="http://colorer.sf.net/2003/hrc"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://colorer.sf.net/2003/hrc http://colorer.sf.net/2003/hrc.xsd">
-
     <type name="yaml">
         <annotation>
             <contributors>
@@ -24,7 +23,6 @@
         <import type="def"/>
 		<entity name="byte" value="\d{1,2}|[01]\d\d|2[0-4]\d|25[0-5]" />
 		<entity name="word" value="\d{1,4}|[0-5]\d{4}|6[0-4]\d{3}|65[0-4]\d{2}|655[0-2]\d|6553[0-5]" />
-
 		<region name="KeyName" parent="def:Keyword"/>
 		<region name="DocumentStart" parent="def:Symbol"/>
 		<region name="DocumentEnd" parent="def:Symbol"/>
@@ -32,7 +30,6 @@
 		<region name="TagEdge" parent="def:Tag"/>
 		<region name="IP" parent="def:EMail"/>
 		<region name="Bordo" parent="yaml:Bordo"/>
-
 		<scheme name="Escapes">
 			<regexp match="/\\[0\\abtnvfre&quot;N_Lp]/" region="def:SymbolStrong" />
 			<regexp match="/\\x[\da-fA-F]{2}/" region="def:SymbolStrong" />
@@ -59,11 +56,9 @@
         <scheme name="Comments">
         	<regexp match="/#.*$/" region="def:Comment"/>
         </scheme>
-
         <scheme name="Keys">
 			<regexp match="/([\w\.\:\-]+)\M:(\s|$)?=/" region1="KeyName" />
         </scheme>
-
         <scheme name="Brackets">
         	<block start="/(\[)/" end="/(\])/" scheme="YamlBody"
         		region00="def:PairStart" region10="def:PairEnd"
@@ -76,12 +71,10 @@
         		<symb name="}"/>
         	</keywords>
         </scheme>
-
         <scheme name="Tags">
             <regexp match="/!h?\!\w+/" region="def:Directive" />
         	<regexp match="/!&lt;[^&gt;]+&gt;/" region="def:Directive" />
         </scheme>
-
         <scheme name="Scalars">
         	<keywords region="def:Keyword" ignorecase="yes">
         		<word name="~"/>
@@ -97,7 +90,6 @@
         		<word name=".NaN"/>
         	</keywords>
         </scheme>
-
         <scheme name="HomeAssistant">
         	<regexp match="/(alarm_control_panel|automation|binary_sensor|button|calendar|camera|cast|counter|device_tracker|fan|floorplan|group|humidifier|input_(boolean|button|number|select|text)|light|media_player|notify|person|script|sensor|switch|telegram_bot|tts|update|utility_meter|weather|zone)\./" region="def:Label"/>
         	<regexp match="/(homeassistant|scene|wake_on_lan|webrtc)\./" region="def:StringEdge"/>
@@ -113,7 +105,6 @@
                 <block start="/( platform| service)/" end="/(:)/" scheme="HomeAssistant" region="def:Comment"/>
                 <regexp match="/([0-2]{1})?([0-9]{1})?[0-9]{1}[.]([0-2]{1})?([0-9]{1})?[0-9]{1}[.]([0-2]{1})?([0-9]{1})?[0-9]{1}[.]([0-2]{1})?([0-9]{1})?[0-9]{1}/" region="def:NumberSuffix" priority="low"/>
         </scheme>
-
         <scheme name="YamlBody">
         	<inherit scheme="HomeAssistant"/>
         	<inherit scheme="Comments"/>
@@ -125,19 +116,14 @@
         	<regexp match="/[|?&gt;!%&amp;`@]($|\s)?=/" region="def:Symbol" />
         	<inherit scheme="Brackets"/>
         	<block start="/([&apos;&quot;])/" end="/(\Y1)/" scheme="Strings" region="def:String" priority="low"
-        		region00="def:PairStart" region10="def:PairEnd"
-        		region01="def:StringEdge" region11="def:StringEdge" />
+        		region00="def:PairStart" region10="def:PairEnd" region01="def:StringEdge" region11="def:StringEdge" />
         	<block start="/[^\s,:?;-]?=/" end="/[,\[\]\{\}#&apos;&quot;]?=|(^\.{3})?=|$/" scheme="Strings" region="def:String" priority="low" />
         	<regexp match="/[\?:,\[\]\{\}#&amp;\*!|&gt;&apos;&quot;%@`\-]/" region="def:Symbol" priority="low"/>
         </scheme>
-        
         <scheme name="yaml">
             <block start="/^(-{3})(\s|$)?=/" end="/^(\.{3}|(-{3})?=)/" scheme="YamlBody" priority="low"
-            	region00="def:PairStart" region10="def:PairEnd"
-            	region01="DocumentStart" region11="DocumentEnd" />
+            	region00="def:PairStart" region10="def:PairEnd"	region01="DocumentStart" region11="DocumentEnd" />
         	<inherit scheme="YamlBody"/>
         </scheme>
-
     </type>
-
 </hrc>
