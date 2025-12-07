@@ -1,6 +1,6 @@
 # FarColorer YAML4HA
-[FarColorer](https://github.com/colorer/FarColorer)* yaml files highlighting for [Home Assistant](https://www.home-assistant.io) syntax.  
-*Support FarColorer ver. 1.6.9 and below.
+[FarColorer](https://github.com/colorer/FarColorer) yaml files highlighting for [Home Assistant](https://www.home-assistant.io) syntax.  
+For FarColorer ver. 1.6.9 and below.
 
 ---
 
